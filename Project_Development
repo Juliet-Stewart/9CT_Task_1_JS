@@ -60,11 +60,19 @@ BEGIN DetectObject
   Stop
   CALL DetectColour
   Drive backwards 50mm
+END
 ~~~
 ![Detect Colour Flowchart](DetectColour.png "Detect Colour")
 ~~~
 BEGIN DetectColour
- 
+  DECLARE string colour
+  INPUT colour
+  IF colour = "red"
+    CALL GrabObject
+  ELSE
+    IF colour = "yellow"
+      CALL GrabObject
+    ELSE
 END
 ~~~
 
